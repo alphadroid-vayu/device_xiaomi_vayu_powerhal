@@ -13,3 +13,7 @@ git clone https://bitbucket.org/vendor-mgc/vendor_mgc.git vendor/mgc
 # Dolby
 rm -rf vendor/dolby
 git clone https://gitlab.com/dogpoopy/vendor_dolby.git vendor/dolby
+
+# Lineage compat
+rm -rf hardware/lineage/compat
+git clone https://github.com/LineageOS/android_hardware_lineage_compat.git hardware/lineage/compat
