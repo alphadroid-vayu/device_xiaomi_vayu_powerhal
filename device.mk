@@ -111,8 +111,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbluetooth_audio_session
 
+# Signing Rom with test keys
+include vendor/lineage-priv/keys/keys.mk
+
+# Dolby
+$(call inherit-product-if-exists, vendor/dolby/dolby.mk)
+
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+
 
 PRODUCT_PACKAGES += \
     libpng.vendor \
@@ -137,9 +144,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
-
-# Google Camera
-$(call inherit-product-if-exists, vendor/mgc/config.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -270,6 +274,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
+    libhidltransport \
     libhwbinder.vendor
 
 # HotwordEnrollement
