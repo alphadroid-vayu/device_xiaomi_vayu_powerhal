@@ -97,16 +97,19 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.sf.hw=0
 debug.egl.hw=0
+debug.hwui.renderer=vulkan
+debug.renderengine.backend=skiaglthreaded
 debug.mdpcomp.logs=0
 debug.sf.enable_gl_backpressure=1
-debug.sf.hw=0
 debug.sf.treat_170m_as_sRGB=1
 persist.sys.sf.native_mode=0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+renderthread.skia.reduceopstasksplitting=true
 vendor.display.comp_mask=0
 vendor.display.disable_decimation=1
 vendor.display.disable_excl_rect=0
@@ -118,8 +121,21 @@ vendor.display.disable_hw_recovery_dump=1
 vendor.display.enable_default_color_mode=0
 vendor.display.enable_force_split=1
 vendor.display.enable_null_display=0
-vendor.display.enable_optimize_refresh=1
+vendor.display.enable_optimize_refresh=0
 vendor.gralloc.disable_ubwc=0
+vendor.display.enable_async_vds_creation=1
+vendor.display.enable_async_powermode=0
+vendor.gralloc.disable_ubwc=0
+vendor.display.enable_posted_start_dyn=1
+vendor.display.enable_camera_smooth=1
+vendor.display.use_smooth_motion=0
+vendor.display.use_layer_ext=0
+vendor.display.disable_metadata_dynamic_fps=1
+vendor.display.defer_fps_frame_count=4
+vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
+vendor.display.qdcm.disable_factory_mode=1
+vendor.display.qdcm.mode_combine=1
+windowsmgr.max_events_per_sec=10
 
 # Listen
 ro.vendor.audio.soundtrigger=sva
